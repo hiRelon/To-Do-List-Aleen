@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List!</title>
+    <link rel="stylesheet" href="tugas3CSS.css">
+</head>
+<body>
+    <form id="form">
+        <div class="column">
+            <h1>My To-do List📝</h1>
+            <br>
+            <input type="text" id=itemInput placeholder="Add Task:">
+        </div>
+        <br>
+        <div class="row">
+            <div class="column">
+                <h4>When's The Deadline?</h4>
+                <br>
+                <input type="date" id="deadline">
+            </div>
+            <div class="column">
+                <h4>How Urgent?</h4>
+                <br>
+				<select name="urgency" id="urgency">
+					<option>--Urgency---</option>
+					<option>High!!</option>
+					<option>Medium!</option>
+					<option>Low</option>
+				</select>
+            </div>
+        </div>
+        <span id="errorMessage"></span>
+        <br>
+        <input type="submit" value="Add">
+    </form>
+
+    <div class="addedTask" id="addedTask" style="display:none">
+        <div class="column">
+            <h1>Added Tasks:</h1>
+            <ul id="list">
+            </ul>
+        </div>
+    </div>
+    <script src="tugas3JS.js"></script>
+</body>
+</html>

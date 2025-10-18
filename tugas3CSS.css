@@ -1,0 +1,204 @@
+html, body  {
+    height: 100%;
+    margin: 0;
+}
+body    {
+    background-image: url('background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1  {
+    color: rgb(93, 12, 104);
+    padding: 15px;
+    margin-bottom: 5px;
+    background-color: #f9cbdf;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+form {
+    background-color: #f5dae5;
+    text-align: center;
+    padding: 30px;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+input[type="text"] {
+    align-items: center;
+    padding: 15px;
+    border-color: lightgray;
+    border-radius: 10px;
+    color: #794c9e;
+}
+input[type="text"]:focus {
+    border-color: #794c9e;
+    outline: none;
+}
+.row    {
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.column {
+    display:flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+    background-color: #b89ac9;
+    border-radius: 15px;
+}
+.column input, .column select   {
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px;
+    border-color: #f9cbdf;
+}
+input[type="date"]  {
+    padding: 10px;
+    border-color: lightgray;
+    border-radius: 15px;
+    color: #794c9e;
+}
+h4  {
+    color: rgb(93, 12, 104);
+    padding: 15px;
+    margin-bottom: 5px;
+    background-color: #f9cbdf;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+select[name="urgency"] {
+    width: 100%;
+    padding: 10px;
+    border-color: lightgray;
+    border-radius: 15px;
+    color: #794c9e;
+}
+input[type="submit"] {
+    background-color: #794c9e;
+    color: #f5dae5;
+    font-size: 17px;
+    border-radius: 15px;
+    border-color: #501f5b;
+    padding: 10px 20px 10px 20px;
+}
+input[type="submit"]:hover {
+    cursor: pointer;
+    color: #f5dae5;
+    background-color: #501f5b;
+    border-color: #b89ac9;
+}
+span[id="errorMessage"] {
+    color: rgb(197, 78, 78);
+    font-size: small;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.addedTask  {
+    display: flex;
+    background-color: #f5dae5;
+    text-align: center;
+    padding: 30px;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.addedTask h1   {
+    color: rgb(93, 12, 104);
+    padding: 15px;
+    margin-bottom: 5px;
+    background-color: #f9cbdf; 
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+#list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+ul li   {
+    list-style: none;
+    position: relative;
+    font-size: 17px;
+    text-align: left;
+    padding: 12px 45px 12px 35px;
+    user-select: none;
+    cursor: pointer;
+    background-color: #b89ac9;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 5;
+}
+ul li .taskTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #501f5b;
+}
+ul li .taskInfo {
+    font-size: 14px;
+    color: #501f5b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul li:hover     {
+    background-color: #f5dae5;
+}
+ul li::before   {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 2px solid #501f5b;
+    border-radius: 50%;
+    background-color: transparent;
+}
+ul li.checked::before {
+    content: '⭐';
+    color:#501f5b;
+    font-size: 18px;
+    border: none;
+    background: none;
+    top: 50%;
+    transform: translateY(-50);
+}
+ul li.checked {
+    text-decoration: line-through;
+    opacity: 0.8;
+    color:#501f5b;
+}
+ul li .deleteButton  {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.3s ease;
+    text-decoration: none;
+}
+ul li .deleteButton:hover   {
+    transform: translateY(-50%) scale(1.2);
+}
